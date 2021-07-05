@@ -1,2 +1,14 @@
-<div class="todo-item">Copy</div>
-<div class="todo-item">Paste</div>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr class="todo-item" *ngFor="let item of todoList">
+      <td class="id">{{item.id}}</td>
+      <td class="name">{{item.name}}</td>
+      <td class="description">{{item.description}}</td>
+    </tr>
+  </tbody>
+</table>

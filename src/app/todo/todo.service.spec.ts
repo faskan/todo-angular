@@ -31,10 +31,10 @@ describe('TodoService', () => {
         id: '445566',
         name: 'Pratice',
         description: 'Practice what you have learned',
-      },
+      }
     ];
     service.query().subscribe((response) => (expectedResult = response.body));
-    httpTestingController.expectOne({ url: '/api/todos', method: 'GET' }).flush(todos);
+    httpTestingController.expectOne({ url: 'http://localhost:8090/api/todos', method: 'GET' }).flush(todos);
     httpTestingController.verify();
     expect(expectedResult).toEqual(todos);
   });
