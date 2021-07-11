@@ -1,3 +1,10 @@
-.fixed-width {
-  width: 650px;
+.fb-color {
+  background-color: #1877F2;
+}
+.twitter-color {
+  background-color: #1DA1F2;
+}
+
+.google-color {
+  background-color:#db4a39;
 }
