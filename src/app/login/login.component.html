@@ -12,19 +12,26 @@
                         <h1><strong>Login</strong></h1>
                     </div>
                     <div class="pt-3 pb-3">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="login()">
                             <!-- User Name Input -->
                             <div class="form-group row justify-content-center px-3">
-                                <div class="col-9 px-0"> <input type="text" placeholder="User name" class="form-control border-info placeicon"> </div>
+                                <div class="col-9 px-0">
+                                  <input type="text" placeholder="User name" formControlName="username" class="form-control border-info placeicon">
+                                </div>
                             </div> <!-- Password Input -->
                             <div class="form-group row justify-content-center px-3">
-                                <div class="col-9 px-0"> <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control border-info placeicon"> </div>
+                                <div class="col-9 px-0">
+                                  <input type="password" formControlName="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control border-info placeicon">
+                                </div>
                             </div> <!-- CheckBox Remember Me-->
                             <div class="form-group row justify-content-center px-3">
                                 <div class="col-9">
                                     <div class="row">
                                         <div class="col-6 px-0">
-                                            <div class="custom-control custom-checkbox mb-3"> <input id="customCheck1" type="checkbox" class="custom-control-input checkbox-muted"> <label for="customCheck1" class="custom-control-label text-muted">Remember Me</label> </div>
+                                            <div class="custom-control custom-checkbox mb-3">
+                                              <input id="customCheck1" type="checkbox" formControlName="rememberMe" class="custom-control-input checkbox-muted">
+                                              <label for="customCheck1" class="custom-control-label text-muted">Remember Me</label>
+                                            </div>
                                         </div> <!-- Forgot Password Link -->
                                         <div class="col-6 px-0 text-right"> <span><a href="#" class="text-danger"><b>Forgot Password?</b></a></span> </div>
                                     </div>
