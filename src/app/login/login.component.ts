@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -14,12 +15,24 @@ export class LoginComponent implements OnInit {
     rememberMe: [false]
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+    private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
   login(): void {
-    console.log(this.loginForm.get('username').value);
+    this.loginService.login({
+      username: this.loginForm.get('username')!.value,
+      password: this.loginForm.get('password')!.value,
+      rememberMe: this.loginForm.get('rememberMe')!.value
+    }).subscribe(
+      () => {
+        console.log('success');
+      },
+      () => {
+        console.log('failure');
+      }
+    )
   }
 }
