@@ -1,5 +1,3 @@
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
 <div class="bg-info">
     <!-- Container containing all contents -->
     <div class="container">
@@ -16,12 +14,15 @@
                             <!-- User Name Input -->
                             <div class="form-group row justify-content-center px-3">
                                 <div class="col-9 px-0">
-                                  <input type="text" placeholder="User name" formControlName="username" class="form-control border-info placeicon">
+                                  <input type="text" placeholder="&#xf007; User name" formControlName="username"
+                                  class="form-control border-info placeicon">
                                 </div>
                             </div> <!-- Password Input -->
                             <div class="form-group row justify-content-center px-3">
                                 <div class="col-9 px-0">
-                                  <input type="password" formControlName="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="form-control border-info placeicon">
+                                  <input type="password" formControlName="password"
+                                  placeholder="&#xf084; &#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                                  class="form-control border-info placeicon">
                                 </div>
                             </div> <!-- CheckBox Remember Me-->
                             <div class="form-group row justify-content-center px-3">
@@ -38,7 +39,9 @@
                                 </div>
                             </div> <!-- Log in Button -->
                             <div class="form-group row justify-content-center">
-                                <div class="col-3 px-3"> <input type="submit" value="Log in" class="btn btn-block btn-info"> </div>
+                                <div class="col-3 px-3">
+                                  <input type="submit" value="Log in" class="btn btn-block btn-info" [disabled]="!loginForm.valid">
+                                </div>
                             </div>
                         </form>
                     </div> <!-- Alternative Login -->

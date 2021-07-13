@@ -10,8 +10,8 @@ import { LoginService } from './login.service';
 export class LoginComponent implements OnInit {
 
   loginForm = this.fb.group({
-    username: [null, Validators.required],
-    password: [null, Validators.required],
+    username: ['', Validators.required],
+    password: ['', Validators.required],
     rememberMe: [false]
   });
 
