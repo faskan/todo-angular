@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 import { LoginService } from './login.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(private fb: FormBuilder,
-    private loginService: LoginService) { }
+    private loginService: LoginService,
+    private authService: SocialAuthService) { }
 
   ngOnInit(): void {
   }
@@ -35,4 +37,9 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
 }
