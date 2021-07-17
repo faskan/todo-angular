@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing.module';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import {
   GoogleLoginProvider,
@@ -23,6 +24,7 @@ import {
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
