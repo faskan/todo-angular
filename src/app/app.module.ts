@@ -14,13 +14,15 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider
 } from 'angularx-social-login';
+import { CallbackComponent } from './callback/callback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
